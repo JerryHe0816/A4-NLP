@@ -1,0 +1,10 @@
+I choose to use the ROUGE score evaluation method for subsequent problems because it provides a comprehensive assessment of both content overlap and sequence matching, and it's a well-established metric in text generation tasks.
+
+
+Subjective Evaluation Criterion:
+I choose "Logical Consistency" as the subjective criterion (scale 1-5):
+1: Completely illogical given the premise and counterfactual
+2: Mostly illogical but has some connection
+3: Partially logical but with some inconsistencies
+4: Mostly logical with minor inconsistencies
+5: Completely logical and consistent with the premise and counterfactual
