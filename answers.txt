@@ -1,4 +1,10 @@
-I choose to use the ROUGE score evaluation method for subsequent problems because it provides a comprehensive assessment of both content overlap and sequence matching, and it's a well-established metric in text generation tasks.
+Problem 1 Solutions:
+
+Two objective evaluation methods:
+
+1. ROUGE Score Evaluation method - This method compares the generated text with the reference (edited ending) using ROUGE metrics which measure overlap in unigrams, bigrams, and longest common subsequences, providing a comprehensive assessment of both content and sequence matching.
+
+2. Semantic Consistency Score method - This method evaluates how well the generated ending maintains key terms from both the premise and counterfactual by calculating a weighted word overlap score between the generated text and the input context.
 
 
 Subjective Evaluation Criterion:
