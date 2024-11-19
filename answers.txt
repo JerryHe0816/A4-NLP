@@ -1,10 +1,17 @@
-Problem 1 Solutions:
+Problem 1:
 
 Two objective evaluation methods:
 
-1. ROUGE Score Evaluation method - This method compares the generated text with the reference (edited ending) using ROUGE metrics which measure overlap in unigrams, bigrams, and longest common subsequences, providing a comprehensive assessment of both content and sequence matching.
+1. ROUGE Score Evaluation method
+This method compares the generated text with the reference (edited ending) 
+using ROUGE metrics which measure overlap in unigrams, bigrams, and 
+longest common subsequences, providing a comprehensive assessment of both 
+content and sequence matching.
 
-2. Semantic Consistency Score method - This method evaluates how well the generated ending maintains key terms from both the premise and counterfactual by calculating a weighted word overlap score between the generated text and the input context.
+2. Semantic Consistency Score method
+This method evaluates how well the generated ending maintains key terms 
+from both the premise and counterfactual by calculating a weighted 
+word overlap score between the generated text and the input context.
 
 
 Subjective Evaluation Criterion:
@@ -14,3 +21,26 @@ I choose "Logical Consistency" as the subjective criterion (scale 1-5):
 3: Partially logical but with some inconsistencies
 4: Mostly logical with minor inconsistencies
 5: Completely logical and consistent with the premise and counterfactual
+
+Problem 2:
+In code.
+
+Problem 3:
+Overall, the model did not seem to perform better. For both test datapoints, 
+when the second example about Niel was introduced in the prompt, it 
+significantly skewed the results (the results only talked about Niel's
+Australian culture, even though this had nothing to do with the datapoint).
+For the first example, the results remained the same as Problem 2. However, 
+our ROUGE scores did improve sigificantly, which suggests that there may be 
+word overlaps, even though the meanings are inconsistent.
+
+Problem 4:
+The model performed much better this time. For all prompts, the responses
+logically flowed and related to the prompt better. One of the responses also
+flowed better than before. For example, in Problem 3, a response to 
+datapoint 1 was 'A dumb kid I believed the eclipse was to blame.', but in 
+this problem, the first response was 'As an dumb kid I believed the eclipse 
+was to blame.', which makes more sense. Our Consistency Scores were also 
+higher. However, we noticed that the second prompt performed worse than the 
+first, which suggests that the second prompt's explained chain of thought 
+wasn't as cohesive as the first prompt's. 
